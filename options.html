@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Salesforce Dashboard Enhancer - Options</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Salesforce Dashboard Enhancer</h1>
+      <h2>Advanced Options</h2>
+    </header>
+    
+    <div class="options-section">
+      <h3>Auto-Refresh Settings</h3>
+      
+      <div class="option-row">
+        <label for="refreshEnabled">Enable Auto-Refresh:</label>
+        <div class="switch-container">
+          <label class="switch">
+            <input type="checkbox" id="refreshEnabled">
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+      
+      <div class="option-row">
+        <label for="customInterval">Custom Refresh Interval (seconds):</label>
+        <input type="number" id="customInterval" min="5" max="3600" step="1">
+      </div>
+      
+      <div class="option-row">
+        <label for="refreshBehavior">Refresh Behavior:</label>
+        <select id="refreshBehavior">
+          <option value="visual">Visual (simulate refresh button click)</option>
+          <option value="api">API-based (if available)</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="options-section">
+      <h3>Display Settings</h3>
+      
+      <div class="option-row">
+        <label for="defaultColumns">Default Number of Columns:</label>
+        <select id="defaultColumns">
+          <option value="0">Salesforce Default (3)</option>
+          <option value="4">4 columns</option>
+          <option value="5">5 columns</option>
+          <option value="6">6 columns</option>
+          <option value="7">7 columns</option>
+        </select>
+      </div>
+      
+      <div class="option-row">
+        <label for="componentSpacing">Component Spacing:</label>
+        <select id="componentSpacing">
+          <option value="default">Default</option>
+          <option value="compact">Compact</option>
+          <option value="tight">Tight</option>
+        </select>
+      </div>
+      
+      <div class="option-row">
+        <label for="applyToAllDashboards">Apply to All Dashboards:</label>
+        <div class="switch-container">
+          <label class="switch">
+            <input type="checkbox" id="applyToAllDashboards">
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+    
+    <div class="options-section">
+      <h3>Advanced</h3>
+      
+      <div class="option-row">
+        <label for="notifications">Show Notifications:</label>
+        <div class="switch-container">
+          <label class="switch">
+            <input type="checkbox" id="notifications">
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+      
+      <div class="option-row">
+        <label for="debugMode">Debug Mode:</label>
+        <div class="switch-container">
+          <label class="switch">
+            <input type="checkbox" id="debugMode">
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+    
+    <div class="buttons">
+      <button id="saveOptions" class="primary">Save Options</button>
+      <button id="resetOptions">Reset to Defaults</button>
+    </div>
+    
+    <div id="status" class="status"></div>
+  </div>
+  
+  <script src="options.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Salesforce Dashboard Enhancer</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Salesforce Dashboard Enhancer</h1>
+    
+    <div class="feature-section">
+      <h2>Auto-Refresh</h2>
+      <div class="switch-container">
+        <label class="switch">
+          <input type="checkbox" id="refreshToggle">
+          <span class="slider round"></span>
+        </label>
+        <span id="refreshStatus">Off</span>
+      </div>
+      
+      <div class="refresh-controls">
+        <label for="refreshInterval">Refresh every:</label>
+        <select id="refreshInterval">
+          <option value="15">15 seconds</option>
+          <option value="30">30 seconds</option>
+          <option value="60" selected>1 minute</option>
+          <option value="300">5 minutes</option>
+          <option value="600">10 minutes</option>
+          <option value="1800">30 minutes</option>
+          <option value="3600">1 hour</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="feature-section">
+      <h2>Dashboard Columns</h2>
+      <div class="columns-container">
+        <label for="columnsCount">Number of columns:</label>
+        <select id="columnsCount">
+          <option value="0">Default (3)</option>
+          <option value="4">4 columns</option>
+          <option value="5">5 columns</option>
+          <option value="6">6 columns</option>
+          <option value="7">7 columns</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="buttons">
+      <button id="refreshNow">Refresh Dashboard Now</button>
+      <button id="openOptions">Advanced Options</button>
+    </div>
+    
+    <div class="status-bar">
+      <div id="statusMessage"></div>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
